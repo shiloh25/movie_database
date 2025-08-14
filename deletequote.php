@@ -3,18 +3,18 @@
 // check user is logged on
 if (isset($_SESSION['admin'])) {
 
-    $ID = $_REQUEST['ID'];
-    $author_ID = $_REQUEST['author'];
+    $Movie_ID = $_REQUEST['Movie_ID'];
+    $director_ID = $_REQUEST['director'];
 
-    delete_ghost($dbconnect, $author_ID);
+    delete_ghost($dbconnect, $director_ID);
 
-    $delete_sql = "DELETE FROM `quotes` WHERE `quotes`. `ID` = $ID";
+    $delete_sql = "DELETE FROM `movies` WHERE `movies`.`Movie_ID` = $Movie_ID";
     $delete_query = mysqli_query($dbconnect, $delete_sql);
 
     ?>
     <h2>Delete Success</h2>
 
-    <p>The requested quote has been deleted.</p>
+    <p>The requested movie has been deleted.</p>
 
     <?php
 

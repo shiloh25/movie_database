@@ -14,16 +14,14 @@ if (isset($_SESSION['admin'])) {
         include("process_form.php");
 
         // delete director if there are no movies associated with that director
-        if ($old_author != $author_ID) {
-            delete_ghost($dbconnect, $old_author);
-        } // end check author changed
+        if ($old_director != $director_ID) {
+            delete_ghost($dbconnect, $old_director);
+        } // end check director changed
 
-        // update quote
-        $stmt = $dbconnect -> prepare("UPDATE `quotes` SET `Author_ID` = ?,
-        `Quote` = ?, `Subject1_ID` = ?, `Subject2_ID` = ?, `Subject3_ID` = ?
-        WHERE `ID` = ?;");
-        $stmt -> bind_param("isiiii", $author_ID, $quote, $subject_ID_1, 
-        $subject_ID_2, $subject_ID_3, $quote_ID);
+        // update movie
+        $stmt = $dbconnect -> prepare("UPDATE `movies` SET `Director_ID` = ?,
+        `Title` = ? WHERE `Movie_ID` = ?;");
+        $stmt -> bind_param("isi", $director_ID, $movie, $movie_ID);
         $stmt -> execute();
 
         // close stmt once everything has been inserted
@@ -31,7 +29,7 @@ if (isset($_SESSION['admin'])) {
         
         $heading = "";
         $heading_type = "edit_success";
-        $sql_conditions = "WHERE ID = $quote_ID";
+        $sql_conditions = "WHERE Movie_ID = $movie_ID";
 
         include("content/results.php");
 

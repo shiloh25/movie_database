@@ -1,5 +1,5 @@
 <div class="box banner">
-    <h1>Quick Quotes</h1>
+    <h1>Quick Movies</h1>
 </div> <!-- / banner -->
 
 <!-- Navigation goes here. edit BOTH the file name and the link name -->
@@ -7,7 +7,7 @@
 
     <div class="linkwrapper">
         <div class="commonsearches">
-            <a href="index.php?page=all_results&search=all">All Quotes</a>
+            <a href="index.php?page=all_results&search=all">All Movies</a>
             <a href="index.php?page=all_results&search=recent">Recent</a>
             <a href="index.php?page=all_results&search=random">Random</a>
         </div> <!-- / commonsearches -->
@@ -21,9 +21,8 @@
 
                 <select class="quick-choose" name="search_type">
                     <option value="all" selected>All</option>
-                    <option value="quote">Quote</option>
-                    <option value="author">Author</option>
-                    <option value="subject">Subject</option>
+                    <option value="quote">Movie</option>
+                    <option value="author">Director</option>
                 </select>
 
                 <input class="submit" type="submit" name="find_quick" value="&#xf002;" >

@@ -4,29 +4,29 @@
 if(isset($_SESSION['admin'])) {
 
     // retrieve quote ID and sanitise it in case someone edits the URL
-    $quote_ID = filter_var($_REQUEST['ID'], FILTER_SANITIZE_NUMBER_INT);
+    $Movie_ID = filter_var($_REQUEST['Movie_ID'], FILTER_SANITIZE_NUMBER_INT);
 
     // adjust heading and find quote
-    $heading_type = "delete_quote";
+    $heading_type = "delete_movie";
     $heading = "";
-    $sql_conditions = "WHERE ID = $quote_ID";
+    $sql_conditions = "WHERE Movie_ID = $Movie_ID";
 
     include("content/results.php");
 
     // check that variable is defined and set to 0 if not
-    if ($find_rs && isset($find_rs['Author_ID'])) {
-        $author_ID = $find_rs['Author_ID'];
+    if ($find_rs && isset($find_rs['Director_ID'])) {
+        $director_ID = $find_rs['Director_ID'];
     } 
     else {
-        $author_ID = 0; 
+        $director_ID = 0; 
     }
 
     ?>
 
     <p>
         <span class="tag white-tag">
-        <a href="index.php?page=../admin/deletequote&ID=<?php echo $quote_ID; 
-        ?>&author=<?php echo $author_ID ?>">Yes, Delete it!</a>
+        <a href="index.php?page=../admin/deletequote&Movie_ID=<?php echo $Movie_ID; 
+        ?>&director=<?php echo $director_ID ?>">Yes, Delete it!</a>
         </span>
 
         &nbsp;

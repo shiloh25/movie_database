@@ -23,7 +23,7 @@ $movie = $edit_results_rs['Title'];
 <div class = "admin-form">
     <h2>Edit a Movie</h2>
 
-    <form action="index.php?page=../admin/change_quote&ID=<?php echo $ID; ?>&
+    <form action="index.php?page=../admin/change_quote&Movie_ID=<?php echo $Movie_ID; ?>&
     directorID=<?php echo $director_ID; ?>" method="post">
         <p>
             <textarea name="movie" placeholder="Movie (Required)"

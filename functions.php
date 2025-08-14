@@ -157,19 +157,19 @@ function country_job($dbconnect, $entity_1, $entity_2, $label_sg, $label_pl, $ta
      
 }
 
-// delete ghost authors
-function delete_ghost($dbconnect, $authorID)
+// delete ghost directors
+function delete_ghost($dbconnect, $directorID)
 {
-    // see if there are other quotes by that author
-    $check_author_sql = "SELECT * FROM `quotes` WHERE `Author_ID` = $authorID";
-    $check_author_query = mysqli_query($dbconnect, $check_author_sql);
+    // see if there are other movies by that director
+    $check_director_sql = "SELECT * FROM `movies` WHERE `Director_ID` = $directorID";
+    $check_director_query = mysqli_query($dbconnect, $check_director_sql);
 
-    $count_author = mysqli_num_rows($check_author_query);
+    $count_director = mysqli_num_rows($check_director_query);
 
-    //if there are not quotes associated with the old author, we can delete
-    if ($count_author <= 1) {
-        $delete_ghost = "DELETE FROM `author` WHERE `author`. `Author_ID` = 
-        $authorID ";
+    //if there are not movies associated with the old director, we can delete
+    if ($count_director <= 1) {
+        $delete_ghost = "DELETE FROM `director` WHERE `director`. `Director_ID` = 
+        $directorID ";
         $delete_ghost_query = mysqli_query($dbconnect, $delete_ghost);
     }
 }

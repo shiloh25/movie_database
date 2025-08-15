@@ -13,7 +13,6 @@ $dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 
 ?>
 
-
 <?php include("content/head.php");?>
 
 <body>

@@ -15,7 +15,7 @@ else {
 // check that we have results
 if ($find_count > 0) {
 
-// customise headings!
+// customise headings
 
 if ($heading != "") {
     $heading = "<h2>$heading ($find_count)</h2>";
@@ -23,8 +23,7 @@ if ($heading != "") {
 
 elseif ($heading_type == "director") {
     // retrieve director name
-    $director_rs = get_item_name($dbconnect, 'director', 'Director_ID',
-    $director_ID);
+    $director_rs = get_item_name($dbconnect, 'director', 'Director_ID', $director_ID);
 
     $director_name = $director_rs['First']." ".$director_rs['Last'];
 
@@ -57,14 +56,14 @@ echo $heading;
 
 while ($find_rs = mysqli_fetch_assoc($find_query)) {
     $movie = $find_rs['Title'];
+    $Movie_ID = $find_rs['Movie_ID'];
 
-        // create full name of director
-        $director_full = $find_rs['Full_Name'];
-        $Movie_ID = $find_rs['Movie_ID'];
-
-        // get director ID for clickable director link
-        $director_ID = $find_rs['Director_ID'];
+    // create full name of director
+    $director_full = $find_rs['Full_Name'];
     
+    // get director ID for clickable director link
+    $director_ID = $find_rs['Director_ID'];
+
     ?>
 
     <div class="results">

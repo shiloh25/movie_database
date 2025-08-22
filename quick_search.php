@@ -15,7 +15,7 @@ if ($search_type == "movie") {
 }
 
 elseif ($search_type == "director") {
-    $sql_conditions = "";
+    $sql_conditions = "WHERE $name_search";
 }
 
 else {

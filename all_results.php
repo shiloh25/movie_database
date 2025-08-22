@@ -18,7 +18,7 @@ elseif ($search_type == "random") {
     $sql_conditions = "ORDER BY RAND() LIMIT 10";
 }
 
-elseif ($search_type=="director") {
+elseif ($search_type == "director") {
     // retrieve director ID
     $director_ID = $_REQUEST['Director_ID'];
     

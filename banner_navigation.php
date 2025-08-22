@@ -21,8 +21,8 @@
 
                 <select class="quick-choose" name="search_type">
                     <option value="all" selected>All</option>
-                    <option value="quote">Movie</option>
-                    <option value="author">Director</option>
+                    <option value="movie">Movie</option>
+                    <option value="director">Director</option>
                 </select>
 
                 <input class="submit" type="submit" name="find_quick" value="&#xf002;" >

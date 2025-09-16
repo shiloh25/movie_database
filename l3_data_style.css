@@ -1,20 +1,22 @@
+/* general text colour and font */
 body {
-    color: #151613;
+    color: #151613; /* black */
     font-family: 'Lato', sans-serif;
 }
 
-/* Box for corners and padding */
+/* box for padding */
 .box {
     padding-left: 20px;
-    /* border-radius: 10px; */
-    /* background-colour: #ddd; */
 }
 
+/* image formatting */
+img {
+    height: auto;
+    width: 30%;
+    margin-bottom: 20px;
+}
 
-/* set up grids... specifics */
-
-/* #### grid for main page #### */
-
+/* grid setup for main page */
 .wrapper {
     display: grid;
     grid-template-columns: auto;
@@ -26,101 +28,98 @@ body {
         "footer";
 }
 
+/* title block */
 .banner {
     grid-area: banner;
+    background-color: #1F273B; /* dark blue */
+    color: #F2F4F7; /* white */
+    font-size: large;
 }
 
+/* navigation block */
 .nav {
     grid-area: nav;
     font-size: 150%;
-    background-color: #F2F4F7;
+    background-color: #F2F4F7; /* white */
     padding-top: 20px;
     padding-bottom: 20px;
     vertical-align: left;
 }
 
+/* main body block */
 .main {
     grid-area: main;
-    background-color: #7196AE;
+    background-color: #7196AE; /* blue */
 }
 
+/* footer block */
 .footer {
     grid-area: footer;
     text-align: right;
     padding: 20px;
+    background-color: #151613; /* black */
+    color: #F2F4F7; /* white */
 }
 
-/* #### grid for naviagtion area page #### */
-
+/* grid for naviagtion area page */
 .linkwrapper {
     display: grid;
     grid-template-columns: 3fr 2fr 1fr;
     grid-template-areas: "commonsearches topsearch topadmin";
-    grid-gap: 4px;
+    grid-gap: 0px;
 }
 
+/* 'all movies', 'recent' and 'random' */
 .commonsearches {
     grid-area: commonsearches;
-    text-align: center;
+    text-align: left;
 }
 
+/* searchbar */
 .topsearch {
     grid-area: topsearch;
     text-align: right;
 }
 
+/* login/out button */
 .topadmin {
     grid-area: topadmin;
     text-align: center;
+    margin-right: 20px;
 }
 
-/* #### Additional div styling (put colours / corners here) */
-
-
-/* Area colouring... */
-.banner {
-    background-color: #1F273B; 
-    color: #F2F4F7;
-}
-
-.footer {
-    background-color: #151613;
-    color: #F2F4F7;
-}
-
-
-/* #### Links Styling #### */
-
-/* Navigation Links */
+/* navigation links styling */
 a.topnav {font-weight: bold;}
-a.topnav:link, a.topnav:visited {color: #141417;} 
-a.topnav.hover {color: #7196AE; text-decoration: none;}
+a.topnav:link, a.topnav:visited {color: #141417;} /* black */
+a.topnav.hover {color: #7196AE; text-decoration: none;} /* blue */
 
 /* links in page */
 a {font-weight: bold;}
-a:link{color: #141417;}
-a:visited{color: #141417;}
-a:hover{color: #7196AE;}
+a:link{color: #141417;} /* black */
+a:visited{color: #141417;} /* black */
+a:hover{color: #7196AE;} /* blue */
 
-/* #### Headings / text styling #### */
+/* headings / text styling */
 h1, h2, h2, h4 {
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* editquote director message box */
 .important {
-    background-color: #ffb6b6;
+    background-color: #c6dae7; /* white */
+    border: 1px solid #1F273B; /* dark blue */
     padding: 10px;
 }
 
 .light_blue {
-    background-color: lightskyblue;
+    background-color: #7196AE; /* blue */
     padding: 10px;
 }
 
+/* results boxes */
 .results {
-    background-color: #F2F4F7;
-    border: 1px solid #1F273B;
-
+    background-color: #F2F4F7; /* white */
+    border: 1px solid #1F273B; /* dark blue */
     padding: 5px;
     margin-left: 0px;
     margin-right: 20px
@@ -143,6 +142,7 @@ h1, h2, h2, h4 {
     background-color: #fff;
 }
 
+/* error message for no results */
 .no-results {
     padding: 5px;
     background-color: #ffbbbb;
@@ -154,14 +154,24 @@ h1, h2, h2, h4 {
     color: #a40f0f;
 }
 
-/* #### Form / Search Styling #### */
+.error_message {
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    background-color: #ffbbbb;
+    border: solid 1px #a40f0f;
+}
+
+/* form / search styling */
 
 form {
     width: 100%;
 }
 
+/* searchbar */
 .search {
-    background: #fff;
+    background: #fff; /* white */
     width: 200px;
 }
 
@@ -172,43 +182,51 @@ form {
 
 .form-submit {
     width: 100%;
-    background-color: #F2F4F7;
+    background-color: #F2F4F7; /* white */
+    margin-bottom: 20px;
 }
 
+/* input text area for forms */
 input, textarea {
     font-size: 14px;
+    font-family: 'Lato', sans-serif;
     padding: 10px;
     display: inline-block;
     border: 1px solid #000;
     box-sizing: border-box;
     width: 100%;
+    background-color: #F2F4F7; /* white */
 }
 
+/* submit changes button */
 .submit {
-    font-family: sans-serif;
+    font-family: 'FontAwesome';
     position: relative;
     width: 45px;
+    height: 40px;
     font-size: 14px;
 
     left: -5px;
-    background-color: #141417;
-    color: #F2F4F7;
+    background-color: #141417; /* black */
+    color: #F2F4F7; /* white */
     border: 1px solid #000;
     border-radius: 0 5px 5px 0;
     display: inline-block;
     padding: 10px;
 }
 
+/* edit and delete buttons */
 .tools {
     text-align: right;
     padding-right: 20px;
 }
 
 input[type="submit"]:hover {
-    background-color: #1F273B;
-    color: #F2F4F7;
+    background-color: #1F273B; /* dark blue */
+    color: #F2F4F7; /* white */
 }
 
+/* searchbar options */
 .quicksearch {
     border-radius: 5px 0 0 5px;
     display: inline-block;
@@ -216,10 +234,10 @@ input[type="submit"]:hover {
 
 .quick-choose {
     padding: 10px;
-    border: solid 1px #000;
+    border: solid 1px #141417; /* black */
 }
 
-/* Rules for navigation on small screens */
+/* rules for navigation on small screens */
 @media only screen and (max-width: 1175px) {
     .linkwrapper{
         grid-template-columns: auto;
@@ -229,7 +247,7 @@ input[type="submit"]:hover {
         "topsearch topsearch";
     }
 
-    /* Adjust alignment of content on small screens */
+    /* adjust alignment of content on small screens */
     .commonsearches {
         text-align: left;
     }

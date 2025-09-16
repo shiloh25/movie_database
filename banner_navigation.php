@@ -7,6 +7,7 @@
 
     <div class="linkwrapper">
         <div class="commonsearches">
+            <a href="index.php">Home</a>
             <a href="index.php?page=all_results&search=all">All Movies</a>
             <a href="index.php?page=all_results&search=recent">Recent</a>
             <a href="index.php?page=all_results&search=random">Random</a>

@@ -7,3 +7,6 @@
             <p>
                 You can also browse by most recent quote or click the 'random' link to get the system to generate ten quotes for you.
             </p>
+
+    <img src="Images/movie_theatre-min.jpg" alt="movie theatre image">
+

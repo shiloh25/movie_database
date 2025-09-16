@@ -17,14 +17,13 @@ include("sub_author.php");
         </p>
 
         <div class="autocomplete">
-            <p><input name="director_full" id="director_full" placeholder="Director Name 
-            (First Last)"/></p>
+            <input name="director_full" id="director_full" placeholder="Director Name (First Last)"/>
         </div>
         
         <br /><br />
 
-        <p><input class="form-submit" type="submit" name="submit"
-        value="Submit Movie" /></p>
+        <input class="form-submit" type="submit" name="submit"
+        value="Submit Movie" />
 
     </form>
 

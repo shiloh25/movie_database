@@ -38,7 +38,7 @@
 
                 ?>
 
-                <a href="index.php?page=../admin/add_quote">
+                <a href="index.php?page=../admin/add_movie">
                 <i class="fa fa-plus fa-2x"></i></a>
                 &nbsp; &nbsp;
                 <a href="index.php?page=/logout">

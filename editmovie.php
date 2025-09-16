@@ -2,10 +2,10 @@
 // check user is logged on
 if (isset($_SESSION['admin'])) {
 
-// retrieve subjects and authors to populate combo box
+// retrieve directors to populate combo box
 include("sub_director.php");
 
-// retrieve current values for quote...
+// retrieve current values for movie...
 $Movie_ID = $_REQUEST['Movie_ID'];
 
 // get values from DB

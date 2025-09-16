@@ -17,7 +17,7 @@ if (isset($_REQUEST['login'])) {
         //password matches
         echo 'password is valid';
         $_SESSION['admin'] = $login_rs['username'];
-        header("Location: index.php?page=../admin/add_quote");
+        header("Location: index.php?page=../admin/add_movie");
 
     } // end valid password if
 

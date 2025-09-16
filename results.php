@@ -83,7 +83,7 @@ while ($find_rs = mysqli_fetch_assoc($find_query)) {
             
             ?>
             <div class="tools">
-                <a href="index.php?page=../admin/editquote&Movie_ID=<?php echo $Movie_ID; ?>"><i class="fa fa-edit fa-2x"></i></a> &nbsp; &nbsp;
+                <a href="index.php?page=../admin/editmovie&Movie_ID=<?php echo $Movie_ID; ?>"><i class="fa fa-edit fa-2x"></i></a> &nbsp; &nbsp;
                 <a href="index.php?page=deleteconfirm&Movie_ID=<?php echo $Movie_ID; ?>"><i class="fa fa-trash fa-2x"></i></a>
             </div>
             <?php

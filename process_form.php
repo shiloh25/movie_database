@@ -17,7 +17,7 @@
     }
 
     // check to see if director is in DB, if it isn't add it
-    // check to see if author exists
+    // check to see if director exists
     $find_director_id = "SELECT * FROM director d WHERE CONCAT(d.First, ' ', 
     d.Last) LIKE '%$director_full%'";
     $find_director_query = mysqli_query($dbconnect, $find_director_id);

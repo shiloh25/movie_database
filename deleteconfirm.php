@@ -3,10 +3,10 @@
 // check user is logged on
 if(isset($_SESSION['admin'])) {
 
-    // retrieve quote ID and sanitise it in case someone edits the URL
+    // retrieve movie ID and sanitise it in case someone edits the URL
     $Movie_ID = filter_var($_REQUEST['Movie_ID'], FILTER_SANITIZE_NUMBER_INT);
 
-    // adjust heading and find quote
+    // adjust heading and find movie
     $heading_type = "delete_movie";
     $heading = "";
     $sql_conditions = "WHERE Movie_ID = $Movie_ID";
@@ -25,7 +25,7 @@ if(isset($_SESSION['admin'])) {
 
     <p>
         <span class="tag white-tag">
-        <a href="index.php?page=../admin/deletequote&Movie_ID=<?php echo $Movie_ID; 
+        <a href="index.php?page=../admin/deletemovie&Movie_ID=<?php echo $Movie_ID; 
         ?>&director=<?php echo $director_ID ?>">Yes, Delete it!</a>
         </span>
 

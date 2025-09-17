@@ -38,27 +38,7 @@ if (isset($_SESSION['admin'])) {
             $find_director_rs = mysqli_fetch_assoc($find_director_query);
             $director_count = mysqli_num_rows($find_director_query);
 
-            // retrieve director ID if director exists
-            if ($director_count > 0) {
-                $director_ID = $find_director_rs['Director_ID'];
-            } else {
-                // split director name and add to DB
-                $names = explode(' ', $director_full);
-
-                if (count($names) > 1) {
-                    $first = $names[0];
-                    $last = $names[count($names) - 1];
-                } elseif (count($names) == 1) {
-                    $first = $names[0];
-                }
-
-                // add name to DB
-                $stmt = $dbconnect->prepare("INSERT INTO `director` (`First`, `Last`) VALUES (?, ?);");
-                $stmt->bind_param("ss", $first, $last);
-                $stmt->execute();
-
-                $director_ID = $dbconnect->insert_id;
-            }
+            include("admin/process_form.php");
 
             // insert movie
             $stmt = $dbconnect->prepare("INSERT INTO `movies` (`Director_ID`, `Title`) VALUES (?, ?);");

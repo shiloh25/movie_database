@@ -44,7 +44,7 @@
     // add name to DB
     $stmt = $dbconnect -> prepare("INSERT INTO `director` (
     `First`, `Last`) VALUES (?, ?); ");
-    $stmt -> bind_param("sss", $first, $last);
+    $stmt -> bind_param("ss", $first, $last);
     $stmt -> execute();
 
     $director_ID = $dbconnect -> insert_id;

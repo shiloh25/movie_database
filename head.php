@@ -10,7 +10,7 @@
     <meta name="author" content="Shiloh Warner">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
 
-    <title>Quick Movies</title>
+    <title>Movie Master</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
     rel="theme/l3_data_style.css">

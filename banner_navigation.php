@@ -1,5 +1,5 @@
 <div class="box banner">
-    <h1>Quick Movies</h1>
+    <h1>Movie Master</h1>
 </div> <!-- / banner -->
 
 <!-- Navigation goes here. edit BOTH the file name and the link name -->

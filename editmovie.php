@@ -20,6 +20,7 @@ $movie = $edit_results_rs['Title'];
 
 ?>
 
+<!-- set up form -->
 <div class = "admin-form">
     <h2>Edit a Movie</h2>
 

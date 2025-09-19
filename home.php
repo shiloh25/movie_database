@@ -1,7 +1,7 @@
 <h2>Welcome</h2>
 
             <p>
-                Please use the 'quick search' area to find movies.  It will give results if your search term is in the movie or director name.  It will also find movies related to a subject (try typing in something like 'love' or 'live').
+                Please use the 'quick search' area to find movies.  It will give results if your search term is in the movie or director name.
             </p>
 
             <p>

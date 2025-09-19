@@ -13,11 +13,13 @@ $dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
 
 ?>
 
+<!-- Include head -->
 <?php include("content/head.php");?>
 
 <body>
     <div class="wrapper">
 
+    <!-- Include banner navigation -->
     <?php include("content/banner_navigation.php"); ?>
 
 
@@ -25,6 +27,7 @@ $dbconnect=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME);
         <div class="box main">
             <?php
 
+            // Include home
             if(!isset($_REQUEST['page'])) {
                 include("content/home.php");
             } // end of home page if

@@ -12,6 +12,7 @@ if (isset($_SESSION['admin'])) {
     $delete_query = mysqli_query($dbconnect, $delete_sql);
 
     ?>
+    <!-- success message -->
     <h2>Delete Success</h2>
 
     <p>The requested movie has been deleted.</p>

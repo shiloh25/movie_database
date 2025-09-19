@@ -7,6 +7,7 @@ include("sub_director.php");
 
 ?>
 
+<!-- set up form -->
 <div class = "admin-form">
     <h2>Add Movie</h2>
 
